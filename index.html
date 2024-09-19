@@ -1,67 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Ипотека</title>  
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
-    </head>
-    <body>
-      <div class=services>
-        <div class=page_head>
-            <span  class="page_head_title lbl">Расчёт ипотеки</span>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ипотека</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class=services>
+    <div class=page_head>
+      <span class="page_head_title lbl">Расчёт ипотеки</span>
+    </div>
+    <div class=page_body>
+      <div class=card_group>
+        <div class="search_bar_wrapper">
+          <input class="search_bar" placeholder="Поиск услуг"></input>
         </div>
-        <div class=page_body>
-          <div class=card_group>
-            <div class="search_bar_wrapper">
-              <input class="search_bar" placeholder="Поиск услуг"></input>
-            </div>
-            <div class="card_wrapper">
-              <div class=card>
-                <div id="annuity_payments"></div>
-                <div class=card_body>
-                  <span  class="card_title">Аннуитетные платежи</span>
-                  <span  class="card_description">Узнайте, сколько нужно платить в месяц в рассчете на равные доли</span>
-                  <button  class="btn">Подробнее</button>
-                </div>
-              </div>
-            </div>
-            <div class="card_wrapper">
-              <div class=card>
-                <div id="differentiated_payments"></div>
-                <div class=card_body>
-                  <span  class="card_title">Дифференцированные платежи</span>
-                  <span  class="card_description">Спланируйте оплату ипотеки уменьшающимися платежами</span>
-                  <button  class="btn">Подробнее</button>
-                </div>
-              </div>
-            </div>
-            <div class="card_wrapper">
-              <div class=card>
-                <div id="insurance"></div>
-                <div class=card_body>
-                  <span  class="card_title">Страхование ипотеки</span>
-                  <span  class="card_description">Рассчитайте ежемесячные платежи за страховку ипотеки</span>
-                  <button  class="btn">Подробнее</button>
-                </div>
-              </div>
+        <div class="card_wrapper">
+          <div class=card>
+            <div id="annuity_payments"></div>
+            <div class=card_body>
+              <span class="card_title">Аннуитетные платежи</span>
+              <span class="card_description">Узнайте, сколько нужно платить в месяц в рассчете на равные доли</span>
+              <button class="btn">Подробнее</button>
             </div>
           </div>
-          <div class=icon_group>
-            <div class=recent_icon>
-              <img id="recent_icon" src="./src/file-document.svg">
+        </div>
+        <div class="card_wrapper">
+          <div class=card>
+            <div id="differentiated_payments"></div>
+            <div class=card_body>
+              <span class="card_title">Дифференцированные платежи</span>
+              <span class="card_description">Спланируйте оплату ипотеки уменьшающимися платежами</span>
+              <button class="btn">Подробнее</button>
             </div>
-            <div class=cart_icon>
-              <div class=material_symbols_article_outline_rounded>
-                <div class="vector"></div>
-              </div>
+          </div>
+        </div>
+        <div class="card_wrapper">
+          <div class=card>
+            <div id="insurance"></div>
+            <div class=card_body>
+              <span class="card_title">Страхование ипотеки</span>
+              <span class="card_description">Рассчитайте ежемесячные платежи за страховку ипотеки</span>
+              <button class="btn">Подробнее</button>
             </div>
           </div>
         </div>
       </div>
-    </body>
+      <div class=icon_group>
+        <div class=icon>
+          <img id="recent_icon" title="Недавние расчеты" src="">
+        </div>
+        <div class=icon>
+          <img id="cart_icon" title="Ваши запросы" src="./src/file-document.svg">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
