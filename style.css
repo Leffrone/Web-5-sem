@@ -33,7 +33,7 @@ body{
 
 .lbl
 {
-	font-family: 'Roboto';
+	font-family: 'Inter';
 	font-style: normal;
 }
 
@@ -42,7 +42,7 @@ body{
 	
 	font-size: 24px;
 	line-height: 28px;
-	font-weight: 800;
+	font-weight: 900;
 	
 	color: #FFFFFF;
 	
@@ -52,565 +52,328 @@ body{
 	flex-grow: 0;
 }
 
+.page_body{
 
+	/* Auto layout */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 30px;
+	gap: 630px;
+	
+	
+	
+	/* Inside auto layout */
+	flex: none;
+	order: 1;
+	align-self: stretch;
+	flex-grow: 1;
+}
+
+.card_group{
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 30px;
+
+width: 1000px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.search_bar_wrapper{
+	justify-content: center;
+}
 
 .search_bar{
 	width: 448px;
 	height: 30px;
+	padding-left: 10px;
 	
 	/* Vibrant Fills/Vibrant Primary */
-	background: #3D3D3D;
+	background: #ADADAD;
+	border-width: 0px;
 	border-radius: 10px;
 	
+	text-align: left;
+  	outline: transparent;
+
 	/* Inside auto layout */
 	flex: flex-start;
 	align-content: center;
 	
 	font-weight: 400;
 	font-size: 14px;
-	
-	color: rgba(255, 255, 255, 0.5);
+
+	color: rgba(255, 255, 255);
 }
 
-/* search_bar */
-
-
-
-
-
-/* page_body */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: flex-start;
-padding: 30px;
-gap: 630px;
-
-width: 686px;
-height: 543px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* card_group */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 0px;
-gap: 30px;
-
-width: 468px;
-height: 483px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* card */
-
-width: 468px;
-height: 141px;
-
-backdrop-filter: blur(2px);
-/* Note: backdrop-filter has minimal browser support */
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* card */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 20px;
-
-position: absolute;
-width: 467px;
-left: calc(50% - 467px/2 - 0.5px);
-top: 0%;
-bottom: 0%;
-
-background: rgba(217, 217, 217, 0.9);
-border-radius: 20px;
-
-
-/* annuity_payments */
-
-width: 134px;
-height: 101px;
-
-background: url(аннуитетные_платежи.png), #E3EEF9;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* card_body */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 0px;
-gap: 10px;
-
-width: 273px;
-height: 101px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* card_title */
-
-width: 180px;
-height: 19px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 19px;
-
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* card_description */
-
-width: 273px;
-height: 34px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 17px;
-
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* btn */
-
-width: 148px;
-height: 28px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* btn_frame */
-
-box-sizing: border-box;
-
-position: absolute;
-width: 148px;
-height: 28px;
-left: 0px;
-top: 73px;
-
-/* Colors/Blue */
-border: 1px solid #007AFF;
-border-radius: 10px;
-
-
-/* more_lbl */
-
-position: absolute;
-width: 77px;
-height: 17px;
-left: 35px;
-top: 79px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-/* Colors/Blue */
-color: #007AFF;
-
-
-
-/* card */
-
-width: 468px;
-height: 141px;
-
-backdrop-filter: blur(2px);
-/* Note: backdrop-filter has minimal browser support */
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* card */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 20px;
-
-position: absolute;
-width: 467px;
-left: calc(50% - 467px/2 - 0.5px);
-top: 0%;
-bottom: 0%;
-
-background: rgba(217, 217, 217, 0.9);
-border-radius: 20px;
-
-
-/* differentiated_payments */
-
-width: 134px;
-height: 101px;
-
-background: url(дифф_платежи.png), #E3EEFA;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* card_body */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 0px;
-gap: 10px;
-
-width: 273px;
-height: 101px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* card_title */
-
-width: 257px;
-height: 19px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 19px;
-
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* card_description */
-
-width: 273px;
-height: 34px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 17px;
-
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* btn */
-
-width: 148px;
-height: 28px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* btn_frame */
-
-box-sizing: border-box;
-
-position: absolute;
-width: 148px;
-height: 28px;
-left: 0px;
-top: 73px;
-
-/* Colors/Blue */
-border: 1px solid #007AFF;
-border-radius: 10px;
-
-
-/* more_lbl */
-
-position: absolute;
-width: 77px;
-height: 17px;
-left: 35px;
-top: 79px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-/* Colors/Blue */
-color: #007AFF;
-
-
-
-/* card */
-
-width: 468px;
-height: 141px;
-
-backdrop-filter: blur(2px);
-/* Note: backdrop-filter has minimal browser support */
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* card */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 20px;
-
-position: absolute;
-width: 467px;
-left: calc(50% - 467px/2 - 0.5px);
-top: 0%;
-bottom: 0%;
-
-background: rgba(217, 217, 217, 0.9);
-border-radius: 20px;
-
-
-/* insurance */
-
-width: 134px;
-height: 101px;
-
-background: url(страхование.jpg);
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-border-radius: 10px;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* card_body */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 0px;
-gap: 10px;
-
-width: 273px;
-height: 101px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* card_title */
-
-width: 175px;
-height: 19px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 19px;
-
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* card_description */
-
-width: 273px;
-height: 34px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 17px;
-
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* btn */
-
-width: 148px;
-height: 28px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* btn_frame */
-
-box-sizing: border-box;
-
-position: absolute;
-width: 148px;
-height: 28px;
-left: 0px;
-top: 73px;
-
-/* Colors/Blue */
-border: 1px solid #007AFF;
-border-radius: 10px;
-
-
-/* more_lbl */
-
-position: absolute;
-width: 77px;
-height: 17px;
-left: 35px;
-top: 79px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-/* Colors/Blue */
-color: #007AFF;
-
-
-
-/* cart_icon */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 5px;
-gap: 10px;
-
-width: 60px;
-height: 60px;
-
-background: #D9D9D9;
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
+.search_bar::placeholder{
+	color: rgba(255, 255, 255);
+}
+
+.card_group{
+	/* Auto layout */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	gap: 30px;
+
+	width: fit-content;
+	height: fit-content;
+	
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;	
+}
+
+.card_wrapper{
+	width: fit-content;
+	height: fit-content;
+}
+
+.card{
+
+	padding: 20px;
+
+	/* Inside auto layout */
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+
+	background: rgba(217, 217, 217, 0.9);
+	border-radius: 1rem;
+	
+	/* Auto layout */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	
+	width: 467px;
+	left: calc(50% - 467px/2 - 0.5px);
+	top: 0%;
+	bottom: 0%;
+}
+
+.card_body{
+	/* Auto layout */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 10px;
+	
+	width: 273px;
+	height: 101px;
+	
+	
+	/* Inside auto layout */
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+
+.card_title{
+	height: 20px;
+	
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	
+	color: #000000;
+	
+	
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+.card_description{
+	width: 273px;
+	height: 34px;
+	
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	
+	color: #000000;
+	
+	
+	/* Inside auto layout */
+	flex: none;
+	order: 1;
+	align-self: stretch;
+	flex-grow: 0;
+}
+
+.btn{
+	width: 148px;
+	height: 28px;
+	background: rgba(255, 255, 255, 0);
+	
+	border: 1px solid #007AFF;
+	border-radius: 0.375rem;
+
+	color: #007AFF;
+	/* Inside auto layout */
+	flex: none;
+	order: 2;
+	flex-grow: 0;
+}
+
+.btn:hover{
+	background: rgba(0, 122, 255, 1);
+	cursor: pointer;
+	color:white;
+}
+
+.btn:active{
+	background: rgba(0, 122, 255, 0.1);
+}
+
+.btn_frame{
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 148px;
+	height: 28px;
+	left: 0px;
+	top: 73px;
+	
+	/* Colors/Blue */
+
+
+}
+
+#annuity_payments{
+	width: 134px;
+	height: 101px;
+	
+	background: url('аннуитетные_платежи.png'), #E3EEF9;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+#differentiated_payments{
+	width: 134px;
+	height: 101px;
+	
+	background: url('дифф_платежи.png'), #E3EEFA;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+#insurance{
+	width: 134px;
+	height: 101px;
+	
+	background: url('страхование.jpg'), #E3EEFA;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 10px;
+	
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+.icon_group{
+	/* Auto layout */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	padding: 15px;
+	gap: 30px;
+	
+	width: 90px;
+	height: 180px;
+	
+	
+	/* Inside auto layout */
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	
+
+}
+
+.recent_icon{
+	/* Auto layout */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+	gap: 10px;
+
+	background: #D9D9D9;
+	
+	width: 60px;
+	height: 60px;
+
+	border-radius: 20px;
+	
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+#recent_icon{
+	width: 50px;
+	height: 50px;
+}
+
+.cart_icon{
+	/* Auto layout */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+	gap: 10px;
+	
+	width: 60px;
+	height: 60px;
+	
+	background: #D9D9D9;
+	border-radius: 20px;
+	
+	/* Inside auto layout */
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
 
 /* material-symbols:article-outline-rounded */
 
