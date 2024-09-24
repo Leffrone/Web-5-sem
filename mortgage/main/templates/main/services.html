@@ -1,0 +1,59 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Ипотека{% endblock %}
+
+{% block head_title %}Расчёт ипотеки{% endblock %}
+
+{% block content %}
+<div class=page_body>
+    <div class=card_group>
+      <div class="search_bar_wrapper">
+        <input class="search_bar" placeholder="Поиск услуг"></input>
+      </div>
+      <div class="card_wrapper">
+        <div class=card>
+          <div class="card_image" id="annuity_payments">
+            <img src="http://172.18.0.3:9000/images/аннуитетные_платежи.png?">
+          </div>
+          <div class=card_body>
+            <span class="card_title">Аннуитетные платежи</span>
+            <span class="card_description">Узнайте, сколько нужно платить в месяц в рассчете на равные доли</span>
+            <button class="btn">Подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div class="card_wrapper">
+        <div class=card>
+          <div class="card_image" id="differentiated_payments">
+            <img src="http://172.18.0.3:9000/images/дифф_платежи.png">
+          </div>
+          <div class=card_body>
+            <span class="card_title">Дифференцированные платежи</span>
+            <span class="card_description">Спланируйте оплату ипотеки уменьшающимися платежами</span>
+            <button class="btn">Подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div class="card_wrapper">
+        <div class=card>
+          <div class="card_image" id="insurance">
+            <img src="http://172.18.0.3:9000/images/страхование.jpg">
+          </div>
+          <div class=card_body>
+            <span class="card_title">Страхование ипотеки</span>
+            <span class="card_description">Рассчитайте ежемесячные платежи за страховку ипотеки</span>
+            <button class="btn">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=icon_group>
+      <div class=icon>
+        <img id="recent_icon" title="Недавние расчеты" src="http://172.18.0.3:9000/images/time.svg">
+      </div>
+      <div class=icon>
+        <img id="cart_icon" title="Ваши запросы" src="http://172.18.0.3:9000/images/file-document.svg">
+      </div>
+    </div>
+  </div>
+  {% endblock %}
