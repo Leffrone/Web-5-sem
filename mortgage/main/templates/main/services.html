@@ -5,55 +5,43 @@
 {% block head_title %}Расчёт ипотеки{% endblock %}
 
 {% block content %}
-<div class=page_body>
-    <div class=card_group>
+  <div class="page_body">
+    <div class="main">
       <div class="search_bar_wrapper">
-        <input class="search_bar" placeholder="Поиск услуг"></input>
+        <form action="{% url 'services' %}" method="GET" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input type="text" name="text" class="search_bar" value="{{ request.GET.text }}" placeholder="Поиск услуг">
+        </form>
       </div>
-      <div class="card_wrapper">
-        <div class=card>
-          <div class="card_image" id="annuity_payments">
-            <img src="http://172.18.0.3:9000/images/аннуитетные_платежи.png?">
+      <div class=card_group>
+        {% for data in data %}
+        <div class="card_wrapper">
+          <div class=card>
+            <div class="card_image" id="{{ data.id }}">
+              <img src="{{ data.image }}">
+            </div>
+            <div class=card_body>
+              <span class="card_title">{{ data.title }}</span>
+              <span class="card_description">{{ data.description }}</span>
+              <form action="{% url 'service_description'%}" method="GET" enctype="multipart/form-data">
+                <button class="btn">Подробнее</button>
+              </form>
+            </div>
           </div>
-          <div class=card_body>
-            <span class="card_title">Аннуитетные платежи</span>
-            <span class="card_description">Узнайте, сколько нужно платить в месяц в рассчете на равные доли</span>
-            <button class="btn">Подробнее</button>
-          </div>
-        </div>
-      </div>
-      <div class="card_wrapper">
-        <div class=card>
-          <div class="card_image" id="differentiated_payments">
-            <img src="http://172.18.0.3:9000/images/дифф_платежи.png">
-          </div>
-          <div class=card_body>
-            <span class="card_title">Дифференцированные платежи</span>
-            <span class="card_description">Спланируйте оплату ипотеки уменьшающимися платежами</span>
-            <button class="btn">Подробнее</button>
-          </div>
-        </div>
-      </div>
-      <div class="card_wrapper">
-        <div class=card>
-          <div class="card_image" id="insurance">
-            <img src="http://172.18.0.3:9000/images/страхование.jpg">
-          </div>
-          <div class=card_body>
-            <span class="card_title">Страхование ипотеки</span>
-            <span class="card_description">Рассчитайте ежемесячные платежи за страховку ипотеки</span>
-            <button class="btn">Подробнее</button>
-          </div>
-        </div>
+        </div>     
+        {% empty %}
+        <span>услуги не найдены</span>
+        {% endfor %}
       </div>
     </div>
-    <div class=icon_group>
-      <div class=icon>
+    <div class="icon_group">
+          <a href="{% url 'calculations' %}" class="icon">
+            <img id="cart_icon" title="Ваши запросы" src="http://172.18.0.3:9000/images/file-document.svg">
+            <span class="lbl">1</span>
+          </a>
+      <!-- <div class=icon>
         <img id="recent_icon" title="Недавние расчеты" src="http://172.18.0.3:9000/images/time.svg">
-      </div>
-      <div class=icon>
-        <img id="cart_icon" title="Ваши запросы" src="http://172.18.0.3:9000/images/file-document.svg">
-      </div>
+      </div> -->
     </div>
   </div>
   {% endblock %}

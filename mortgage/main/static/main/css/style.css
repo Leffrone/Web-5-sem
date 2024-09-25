@@ -30,6 +30,7 @@ body {
 .lbl {
 	font-family: 'Inter';
 	font-style: normal;
+	text-decoration: none;
 }
 
 .page_head_title {
@@ -47,41 +48,72 @@ body {
 	flex-grow: 0;
 }
 
-.page_body {
+.page_body {/* page_body */
 
 	/* Auto layout */
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start;
-	padding: 30px;
-	gap: 630px;
-
-
-
+	padding: 0px;
+	gap: 25px;
+	
+	
 	/* Inside auto layout */
 	flex: none;
 	order: 1;
+	align-self: stretch;
+	flex-grow: 0;
+	
+}
+
+.main{
+	/* main */
+
+	/* Auto layout */
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	padding: 25px 0px;
+	gap: 25px;
+	
+	margin: 0 auto;
+	
+	/* Inside auto layout */
+	order: 0;
+	flex-grow: 0;
+	}
+
+.tools{
+	/* Auto layout */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
+
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
 	align-self: stretch;
 	flex-grow: 1;
 }
 
 .card_group {
-
 	/* Auto layout */
 	display: flex;
-	flex-direction: column;
+	flex-flow: row wrap;
+	justify-content: center;
 	align-items: center;
-	padding: 0px;
+	padding: 15px;
 	gap: 30px;
 
-	width: 1000px;
+	max-width: 2000px;
+	height: fit-content;
 
 	/* Inside auto layout */
-	flex: none;
 	order: 0;
 	flex-grow: 0;
-
 }
 
 .search_bar_wrapper {
@@ -113,24 +145,6 @@ body {
 
 .search_bar::placeholder {
 	color: rgba(255, 255, 255);
-}
-
-.card_group {
-	/* Auto layout */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 15px;
-	gap: 30px;
-
-	width: fit-content;
-	height: fit-content;
-
-	/* Inside auto layout */
-	flex: none;
-	order: 0;
-	flex-grow: 0;
 }
 
 .card_wrapper {
@@ -229,7 +243,7 @@ body {
 
 	/* Inside auto layout */
 	flex: none;
-	order: 1;
+	order: 0;
 	align-self: stretch;
 	flex-grow: 0;
 }
@@ -245,7 +259,7 @@ body {
 	color: #007AFF;
 	/* Inside auto layout */
 	flex: none;
-	order: 2;
+	order: 0;
 	flex-grow: 0;
 }
 
@@ -259,25 +273,11 @@ body {
 	background: rgba(0, 122, 255, 0.1);
 }
 
-.btn_frame {
-	box-sizing: border-box;
-
-	position: absolute;
-	width: 148px;
-	height: 28px;
-	left: 0px;
-	top: 73px;
-
-	/* Colors/Blue */
-
-
-}
-
 #annuity_payments {
 	width: 134px;
 	height: 101px;
 
-	background: url('аннуитетные_платежи.png'), #E3EEF9;
+	background: #E3EEF9;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
 
@@ -291,7 +291,7 @@ body {
 	width: 134px;
 	height: 101px;
 
-	background: url('дифф_платежи.png'), #E3EEFA;
+	background: #E3EEFA;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
 
@@ -305,7 +305,7 @@ body {
 	width: 134px;
 	height: 101px;
 
-	background: url('страхование.jpg'), #E3EEFA;
+	background: #E3EEFA;
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	border-radius: 10px;
 
@@ -316,46 +316,45 @@ body {
 }
 
 .icon_group {
+	/* icon_group */
+
 	/* Auto layout */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
-	padding: 15px;
 	gap: 30px;
-
-	width: 90px;
-	height: 180px;
-
-
+	margin: 25px;
+	
+	
 	/* Inside auto layout */
 	flex: none;
 	order: 1;
 	flex-grow: 0;
-
+	
 
 }
 
 .icon {
+	/* cart_icon */
+
 	/* Auto layout */
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding: 5px;
 	gap: 10px;
-
+	padding: 10px;
+	text-decoration: none;
+	
 	background: #D9D9D9;
-
-	width: 40px;
-	height: 40px;
-
-	border-radius: 0.75rem;
-
+	border-radius: 20px;
+	
 	/* Inside auto layout */
 	flex: none;
-	order: 0;
+	order: 1;
 	flex-grow: 0;
+	
 }
 
 .icon:hover {
@@ -365,6 +364,7 @@ body {
 
 .icon:active {
 	filter: brightness(100%);
+	color: black;
 }
 
 #recent_icon {
@@ -377,4 +377,11 @@ body {
 	width: 35px;
 	height: 35px;
 	filter: invert(36%) sepia(0%) saturate(0%) hue-rotate(168deg) brightness(86%) contrast(90%);
+}
+
+.fill-div{
+	display: block;
+	width: 100px;
+	height: 100px;
+	text-decoration: none;
 }

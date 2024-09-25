@@ -13,7 +13,7 @@
 </head>
 <body>
         <div class=page_head>
-          <span class="page_head_title lbl">{% block head_title %}{% endblock %}</span>
+          <a href="{% url 'services' %}" style="text-decoration: none;" class="page_head_title lbl">{% block head_title %}{% endblock %}</a>
         </div>
     {% block content %}{% endblock %}
 </body>
