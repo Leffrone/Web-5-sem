@@ -1,0 +1,170 @@
+body {
+	margin: 0px;
+	/* Auto layout */
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+    font-family: 'Inter';
+	font-style: normal;
+	text-decoration: none;
+
+	background: #FFFFFF;
+}
+
+.page_head {
+	/* Auto layout */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px 20px;
+	gap: 20px;
+
+	height: 70px;
+
+	background: #676767;
+
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	align-self: stretch;
+	flex-grow: 0;
+}
+
+.lbl {
+	font-family: 'Inter';
+	font-style: normal;
+	text-decoration: none;
+}
+
+.page_head_title {
+	/* page_head_title */
+
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 900;
+
+	color: #FFFFFF;
+
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.page_body{
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 20px;
+    gap: 36px;
+    
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+
+.card{
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+
+.title{/* title */
+    width: fit-content;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 35px;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+}
+
+
+.card_description{/* card_description */
+
+    width: 300px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    flex: none;    
+}
+
+.image{/* image */
+
+    width: 250px;
+    height: 190px;
+    
+    background: #E3EEFA;
+    border-radius: 20px;
+    
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+
+}
+
+.image img {
+	flex-shrink: 1;
+	object-fit: cover;
+	min-width: 100%;
+	min-height: 100%
+}
+
+.desc_ext{/* desc_ext */
+
+    width: 489px;
+    height: 203px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    
+}

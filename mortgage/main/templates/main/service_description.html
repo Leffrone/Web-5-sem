@@ -1,6 +1,20 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block title %}Описание{% endblock %}
 
+{% block styles%} <link rel="stylesheet" href="{% static 'main/css/description.css' %}"> {% endblock %}
+
 {% block head_title %}Описание{% endblock %}
 
+{% block content %}
+<div class=description>
+    <div class=page_body>
+      <div class=card><span  class="title">{{data.title}}</span>
+        <div class="image">
+            <img src="{{ data.image }}">
+        </div>
+      </div><span  class="desc_ext">{{ data.desc_extended }}</span>
+    </div>
+  </div>
+{% endblock %}

@@ -1,5 +1,23 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block title %}Расчёты{% endblock %}
 
+{% block styles%} <link rel="stylesheet" href="{% static 'main/css/calculations.css' %}"> {% endblock %}
+
 {% block head_title %}Ваши расчёты{% endblock %}
+
+{% block content %}
+<div class=page_body><span  class="order_title">Ваша заявка</span>
+    {% for card in order_cards %}
+    <div class=order_card>
+      <div class="card_image" id="{{ card.id }}">
+          <img src="{{ card.image }}">
+      </div>
+    <div class=card_body><span  class="title">Расчёт</span><span  class="desc">Аннуитетные платежи</span></div>
+    </div>
+    {% empty %}
+      <span>услуги не найдены</span>
+    {% endfor %}
+</div>
+{% endblock %}

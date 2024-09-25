@@ -1,0 +1,287 @@
+body {
+	margin: 0px;
+	/* Auto layout */
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+    font-family: 'Inter';
+	font-style: normal;
+	text-decoration: none;
+
+	background: #FFFFFF;
+}
+
+.page_head {
+	/* Auto layout */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px 20px;
+	gap: 20px;
+
+	height: 70px;
+
+	background: #676767;
+
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	align-self: stretch;
+	flex-grow: 0;
+}
+
+.lbl {
+	font-family: 'Inter';
+	font-style: normal;
+	text-decoration: none;
+}
+
+.page_head_title {
+	/* page_head_title */
+
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 900;
+
+	color: #FFFFFF;
+
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+.page_body{
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    
+    width: 992px;
+    height: 497px;
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;    
+}
+
+.order_title{
+    /* order_title */
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.order_card{
+    /* order_card */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 52px;
+    gap: 20px;
+    
+    width: 952px;
+    height: 182px;
+    
+    background: #D9D9D9;
+    border-radius: 20px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+.annuity_payments{
+    /* annuity_payments */
+
+    width: 134px;
+    height: 101px;
+    
+    background: url(аннуитетные_платежи.png), #E3EEF9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+.card_body{
+    /* card_body */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    
+    width: 251px;
+    height: 74px;
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+.title{
+    /* title */
+
+    width: 169px;
+    height: 26px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #000000;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.desc{
+    /* desc */
+
+    width: 251px;
+    height: 28px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;}
+
+
+/* order_card */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 40px 52px;
+gap: 20px;
+
+width: 952px;
+height: 182px;
+
+background: #D9D9D9;
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* differentiated_payments */
+
+width: 134px;
+height: 101px;
+
+background: url(дифф_платежи.png), #E3EEFA;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* card_body */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 20px;
+
+width: 363px;
+height: 74px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* title */
+
+width: 169px;
+height: 26px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 28px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* desc */
+
+width: 363px;
+height: 28px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;

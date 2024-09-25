@@ -200,7 +200,14 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden
+	overflow: hidden;
+
+	width: 134px;
+	height: 101px;
+
+	background: #E3EEF9;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
 }
 
 .card_image img {
@@ -273,13 +280,7 @@ body {
 	background: rgba(0, 122, 255, 0.1);
 }
 
-#annuity_payments {
-	width: 134px;
-	height: 101px;
-
-	background: #E3EEF9;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 10px;
+#1 {
 
 	/* Inside auto layout */
 	flex: none;
@@ -287,7 +288,7 @@ body {
 	flex-grow: 0;
 }
 
-#differentiated_payments {
+#2 {
 	width: 134px;
 	height: 101px;
 
@@ -301,7 +302,7 @@ body {
 	flex-grow: 0;
 }
 
-#insurance {
+#3 {
 	width: 134px;
 	height: 101px;
 

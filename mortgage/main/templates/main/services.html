@@ -1,6 +1,9 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block title %}Ипотека{% endblock %}
+
+{% block styles %} <link rel="stylesheet" href="{% static 'main/css/style.css' %}"> {% endblock %}
 
 {% block head_title %}Расчёт ипотеки{% endblock %}
 
@@ -23,7 +26,7 @@
             <div class=card_body>
               <span class="card_title">{{ data.title }}</span>
               <span class="card_description">{{ data.description }}</span>
-              <form action="{% url 'service_description'%}" method="GET" enctype="multipart/form-data">
+              <form action="{% url 'service_description' data.id %}" method="GET" enctype="multipart/form-data">
                 <button class="btn">Подробнее</button>
               </form>
             </div>
