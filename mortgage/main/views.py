@@ -29,7 +29,7 @@ cards = [
 calculations = [
     {
         'id':1,
-        'items':[1, 2]
+        'items':[1, 2],
     },
 ]
 
@@ -49,10 +49,9 @@ def service_description(request, id):
     return render(request, 'main/service_description.html', {"data": data})
 
 def calculations(request):
-    calculation = next((calculation for calculation in calculations if int(calculation['id']) == int(1)), None)
-    card_ids = calculation.get('items', [])
-    order_cards = [card for card in cards if card['id'] in card_ids]
+    #calculation = next((calculation for calculation in calculations if int(calculation['id']) == 1), None)
+    order_cards = [card for card in cards if card['id'] in [1, 2]]
     return render(request, 'main/calculations.html',{
-        'calculations':calculation,
-        'cards':order_cards,
+        'calculations':calculations,
+        'order_cards':order_cards,
     })
