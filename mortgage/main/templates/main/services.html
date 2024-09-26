@@ -38,9 +38,9 @@
       </div>
     </div>
     <div class="icon_group">
-          <a href="{% url 'calculations' %}" class="icon">
+          <a href="{% url 'calculations' calcs_list_id %}" class="icon">
             <img id="cart_icon" title="Ваши запросы" src="http://172.18.0.3:9000/images/file-document.svg">
-            <span class="lbl">1</span>
+            {% if calcs_count != 0 %}<span class="lbl">{{calcs_count}}</span>{% endif %}
           </a>
       <!-- <div class=icon>
         <img id="recent_icon" title="Недавние расчеты" src="http://172.18.0.3:9000/images/time.svg">

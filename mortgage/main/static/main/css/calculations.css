@@ -132,6 +132,28 @@ body {
 	height: fit-content;
 }
 
+.card{
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 52px;
+    gap: 20px;
+    
+    width: 848px;
+    height: 102px;
+    
+    background: #D9D9D9;
+    border-radius: 20px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    
+    
+}
+
 .card_body{
     /* card_body */
 

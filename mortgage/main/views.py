@@ -26,32 +26,42 @@ cards = [
     },
 ]
 
-calculations = [
+calcs_list = [
     {
         'id':1,
+        'items':[1, 2, 3],
+    },
+    {
+        'id':2,
         'items':[1, 2],
     },
 ]
 
 def services(request):
-    data = cards    
-    
+    calcs_list_id = 1
+    calcs_count = 0
+    cards_data = cards  
+
     search = request.GET.get('text', "")
     if search:
-        data = [card for card in cards if search.lower() in card['title'].lower()]
-    
-    return render(request, 'main/services.html', {"data": data})
+        cards_data = [card for card in cards if search.lower() in card['title'].lower()]
+
+    calcs_count = len(next((calc for calc in calcs_list if calcs_list_id == calc['id']), {'items' : []})['items'])
+
+    return render(request, 'main/services.html', {"data": cards_data, "calcs_list_id": calcs_list_id,"calcs_count": calcs_count})
 
 def service_description(request, id):
-    data = next((card for card in cards if int(id) == int(card['id'])), None)
+    data = next((card for card in cards if id == card['id']), None)
     if not data:
         return get_object_or_404(data)
     return render(request, 'main/service_description.html', {"data": data})
 
-def calculations(request):
-    #calculation = next((calculation for calculation in calculations if int(calculation['id']) == 1), None)
-    order_cards = [card for card in cards if card['id'] in [1, 2]]
+def calculations(request, id):
+    calcs = next((calc for calc in calcs_list if calc['id'] == id), None)
+    order_cards = []
+    if calcs:
+        order_cards = [card for card in cards if card['id'] in calcs['items']]
     return render(request, 'main/calculations.html',{
-        'calculations':calculations,
+        'calcs':calcs_list,
         'order_cards':order_cards,
     })
