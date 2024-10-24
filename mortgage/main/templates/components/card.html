@@ -1,0 +1,14 @@
+<div class="card_wrapper">
+    <div class=card>
+      <div class="card_image" id="{{ data.id }}">
+        <img src="{{ data.image }}">
+      </div>
+      <div class=card_body>
+        <span class="card_title">{{ data.title }}</span>
+        <span class="card_description">{{ data.description }}</span>
+        <form action="{% url 'calc_description' data.id %}" method="GET" enctype="multipart/form-data">
+          <button class="btn">Подробнее</button>
+        </form>
+      </div>
+    </div>
+  </div> 

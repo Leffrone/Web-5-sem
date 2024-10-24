@@ -1,0 +1,53 @@
+<div class="page_head">
+    <style>
+        .page_head {
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px 20px;
+            gap: 20px;
+        
+            height: 70px;
+        
+            background: #fff;
+            border-bottom: 3px solid #555;
+        
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        .page_head_title{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        h1{
+            margin: 0px;
+
+            font-family: 'Roboto';
+            font-size: 24px;
+            color: #555;
+        }
+
+        .red_letter{
+	        color:red;
+        }
+
+        #Vector\ 2588{
+            border: 1.5px solid #FF0000;
+        }
+
+    </style>
+    <a href="{% url 'calc_choose' %}" style="text-decoration: none;" class="page_head_title">
+        <img id="head_icon" src="http://172.18.0.4:9000/images/head_icon.svg">
+        <div>
+            <h1><span class="red_letter">Р</span>асчёт</h1>
+            <h1><span class="red_letter">и</span>потеки</h1>
+        </div>
+    </a>
+</div>

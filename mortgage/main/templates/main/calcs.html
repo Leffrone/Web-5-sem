@@ -5,10 +5,10 @@
 
 {% block styles%} <link rel="stylesheet" href="{% static 'main/css/calculations.css' %}"> {% endblock %}
 
-{% block head_title %}Ваши расчёты{% endblock %}
+{% block head %}{% include 'components/head.html'%}{% endblock %}
 
 {% block content %}
-<div class=page_body><span  class="order_title">Ваша заявка</span>
+<div class=page_body><span  class="order_title">Текущие расчёты</span>
     {% for card in order_cards %}
     <div class="card_wrapper">
       <div class=card>
