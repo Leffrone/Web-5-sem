@@ -76,12 +76,12 @@ WSGI_APPLICATION = 'mortgage.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'mortgage',
-        # 'USER': 'admin',
-        # 'PASSWORD': 'root',
-        # 'HOST': 'localhost',
-        # 'PORT': 5432, 
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mortgage',
+        'USER': 'admin',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': 5432, 
     }
 }
 
