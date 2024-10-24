@@ -11,9 +11,18 @@
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
-        <div class=page_head>
-          <a href="{% url 'services' %}" style="text-decoration: none;" class="page_head_title lbl">{% block head_title %}{% endblock %}</a>
-        </div>
+    <style>
+        body {
+            margin: 0 100px;
+            /* Auto layout */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            background: #FFFFFF;
+        }
+    </style>
+    {% block head %}{% endblock %}
     {% block content %}{% endblock %}
 </body>
 </html>

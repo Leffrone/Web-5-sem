@@ -5,7 +5,7 @@
 
 {% block styles%} <link rel="stylesheet" href="{% static 'main/css/description.css' %}"> {% endblock %}
 
-{% block head_title %}Описание{% endblock %}
+{% block head %}{% include 'components/head.html'%}{% endblock %}
 
 {% block content %}
 <div class=description>

@@ -19,7 +19,8 @@ from django.urls import path
 from main import views
 
 urlpatterns = [
-    path('services/', views.services, name='services'),
-    path('services/<str:id>/', views.service_description, name='service_description'),
-    path('calculations/', views.calculations, name='calculations'),   
+    path('admin/', admin.site.urls),
+    path('', views.calc_choose, name='calc_choose'),
+    path('/<int:id>/', views.calc_description, name='calc_description'),
+    path('calcs/<int:id>', views.calcs, name='calcs'),   
 ]

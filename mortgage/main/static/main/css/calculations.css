@@ -1,17 +1,3 @@
-body {
-	margin: 0px;
-	/* Auto layout */
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-
-    font-family: 'Inter';
-	font-style: normal;
-	text-decoration: none;
-
-	background: #FFFFFF;
-}
-
 .page_head {
 	/* Auto layout */
 	display: flex;
@@ -22,7 +8,8 @@ body {
 
 	height: 70px;
 
-	background: #676767;
+	background: #fff;
+	border-bottom: 3px solid #555;
 
 	/* Inside auto layout */
 	flex: none;
@@ -88,48 +75,31 @@ body {
     flex-grow: 0;
 }
 
-.order_card{
-    /* order_card */
+.card_wrapper{
+    width: fit-content;
+	height: fit-content;
+}
 
+.card{
     /* Auto layout */
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 40px 52px;
+    padding: 20px;
     gap: 20px;
     
-    width: 952px;
-    height: 182px;
+    width: 848px;
     
-    background: #D9D9D9;
-    border-radius: 20px;
+	background: #f0f0f0;
+	border-radius: 0.5rem;
+	border: 1px solid #bbb;
     
     /* Inside auto layout */
     flex: none;
     order: 1;
     flex-grow: 0;
-}
-
-
-.annuity_payments{
-    /* annuity_payments */
-
-    width: 134px;
-    height: 101px;
     
-    background: url(аннуитетные_платежи.png), #E3EEF9;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
     
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
-
-.card_wrapper{
-    width: fit-content;
-	height: fit-content;
 }
 
 .card_body{
@@ -143,9 +113,6 @@ body {
     padding: 0px;
     gap: 20px;
     
-    width: 251px;
-    height: 74px;
-    
     
     /* Inside auto layout */
     flex: none;
@@ -156,9 +123,6 @@ body {
 
 .title{
     /* title */
-
-    width: 169px;
-    height: 26px;
     
     font-family: 'Roboto';
     font-style: normal;
@@ -175,45 +139,38 @@ body {
 }
 
 .desc{
-    /* desc */
-
-    width: 251px;
-    height: 28px;
     
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
-    
-    color: #000000;
-    
-    
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;}
 
-    .card_image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
+    width: fit-content;
+}
+
+.card_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    margin-left: 10px;
     
-        width: 134px;
-        height: 101px;
+    width: 134px;
+    height: 101px;
     
-        background: #E3EEF9;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-    }
-    
-    .card_image img {
-        flex-shrink: 1;
-        object-fit: cover;
-        min-width: 100%;
-        min-height: 100%
-    }
+    background: #E3EEF9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.card_image img {
+    flex-shrink: 1;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%
+}
     
 
 

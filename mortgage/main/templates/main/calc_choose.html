@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Ипотека{% endblock %}
+
+{% block styles %} <link rel="stylesheet" href="{% static 'main/css/style.css' %}"> {% endblock %}
+
+{% block head %}{% include 'components/head.html'%}{% endblock %}
+
+{% block content %}
+  <div class="page_body">
+    <div class="main">
+      <div class="search_bar_wrapper">
+        <form action="{% url 'calc_choose' %}" method="GET" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input type="text" name="text" class="search_bar" value="{{ request.GET.text }}" placeholder="Поиск услуг">
+        </form>
+      </div>
+      <div class=card_group>
+        {% for data in data %}
+          {% include 'components/card.html' with data=data%}    
+        {% empty %}
+        <span>услуги не найдены</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="icon_group">
+          <a href="{% url 'calcs' calcs_list_id %}" class="icon">
+            <img id="cart_icon" title="Ваши запросы" src="http://172.18.0.4:9000/images/file-document.svg">
+            {% if calcs_count != 0 %}<span class="lbl">{{calcs_count}}</span>{% endif %}
+          </a>
+      <!-- <div class=icon>
+        <img id="recent_icon" title="Недавние расчеты" src="http://172.18.0.3:9000/images/time.svg">
+      </div> -->
+    </div>
+  </div>
+  {% endblock %}
