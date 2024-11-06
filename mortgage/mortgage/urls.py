@@ -19,8 +19,10 @@ from django.urls import path
 from main import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.calc_choose, name='calc_choose'),
-    path('/<int:id>/', views.calc_description, name='calc_description'),
-    path('calcs/<int:id>', views.calcs, name='calcs'),   
+    path('admin', admin.site.urls),
+    path('', views.mortgage_home, name='mortgage_home'),
+    path('<int:id>', views.mortgage_desc, name='mortgage_desc'),
+    path('calc/<int:id>', views.calculation, name='calculation'),  
+    path('add_calculation/<int:id>', views.add_calculation, name='add_calculation'),
+    path('delete_calculation/<int:id>', views.delete_calculation, name='delete_calculation')
 ]

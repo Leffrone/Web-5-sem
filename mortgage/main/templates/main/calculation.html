@@ -1,0 +1,55 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Расчёты{% endblock %}
+
+{% block styles%} <link rel="stylesheet" href="{% static 'main/css/calculations.css' %}"> {% endblock %}
+
+{% block head %}{% include 'components/head.html'%}{% endblock %}
+
+{% block content %}
+<div class=page_body>
+  <span  class="order_title">Текущие расчёты</span>
+  <span>Пользователь {{request.user}}</span>
+  <div class="value_input_group">
+    <div class="value_wrapper">
+      <span>Сумма ипотеки:</span>
+      <div class="value_input_wrapper">
+        <form>
+          <input type="text" name="value" class="value_input" value="{{ calc_data.value }}" placeholder="сумма">
+        </form>
+      </div>
+      <span>₽</span>
+    </div>
+  </div>
+    {% for card in calc_card_content %}
+    <div class="card_wrapper">
+      <div class=card>
+        <div class="card_image" id="{{ card.mortgage_type.id }}">
+            <img src="{{ card.mortgage_type.image }}">
+        </div>
+        <div class=card_body>
+          <span class="desc">{{ card.mortgage_type.title }}</span>
+          <div class="interest_rate_wrapper">
+            <span>Процентная ставка:</span>
+            <div class="interest_rate_input_wrapper">
+              <form>
+                <input type="text" name="interest_rate" class="interest_rate_input" value="{{ card.interest_rate }}" placeholder="процент">
+             </form>
+            </div>
+            <span>%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+      <span>Выберите, что нужно рассчитать на странице меню</span>
+    {% endfor %}
+    <form action="{% url 'delete_calculation' calc_data.id %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <button id="btn_delete" class="btn">
+        Удалить
+      </button>
+    </form>
+</div>
+{% endblock %}

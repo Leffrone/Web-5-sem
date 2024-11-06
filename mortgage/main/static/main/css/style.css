@@ -372,3 +372,25 @@
 	height: 100px;
 	text-decoration: none;
 }
+
+
+.btn_group {
+    height: fit-content;
+    width: fit-content;
+	align-items: center;
+	gap: 10px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#btn_add{
+	height: 28px;
+	width: 28px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	stroke: #f00;
+	background: none;
+}

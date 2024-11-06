@@ -1,3 +1,9 @@
+body{
+    font-family: 'Inter';
+	font-style: normal;
+	text-decoration: none;
+}
+
 .page_head {
 	/* Auto layout */
 	display: flex;
@@ -62,7 +68,7 @@
     
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 0;
     font-size: 24px;
     line-height: 28px;
     
@@ -120,30 +126,12 @@
     flex-grow: 0;
 }
 
-
-.title{
-    /* title */
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 28px;
-    
-    color: #000000;
-    
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
-
 .desc{
     
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 28px;
 
     width: fit-content;
@@ -172,99 +160,111 @@
     min-height: 100%
 }
     
+.value_wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    font-size: 20px;
 
+    align-items: center;
+}
 
-/* order_card */
+.value_input_wrapper {
+	justify-content: center;
+	border: #bbb solid 1px;
+	border-radius: 0.375rem;
+    background: #fff;
+}
 
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 40px 52px;
-gap: 20px;
+.value_input{
+    width: 160px;
+    font-size: 20px;
 
-width: 952px;
-height: 182px;
+    padding-left: 10px;
 
-background: #D9D9D9;
-border-radius: 20px;
+	background: transparent;
 
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
+	/* Vibrant Fills/Vibrant Primary */
+	border: none;
+	text-align: left;
 
+	/* Inside auto layout */
+	flex: flex-start;
+	align-content: center;
+}
 
-/* differentiated_payments */
+.value_input::placeholder {
+	color: #bbbbbb;
+}
 
-width: 134px;
-height: 101px;
+.value_input:focus-visible{
+	outline: none;
+}
 
-background: url(дифф_платежи.png), #E3EEFA;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+.btn {
+	width: 148px;
+	height: 28px;
+	background: #bbb;
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
+	border: 1px solid #bbb;
+	border-radius: 0.375rem;
 
+	color: white;
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;
 
-/* card_body */
+	-webkit-transition: background-color 50ms linear;
+    -ms-transition: background-color 50ms linear;
+    transition: background-color 50ms linear;
+}
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 0px;
-gap: 20px;
+.btn:hover {
+	background: #aaa;
+	-webkit-transition: background-color 50ms linear;
+    -ms-transition: background-color 50ms linear;
+    transition: background-color 50ms linear;
+	cursor: pointer;
+}
 
-width: 363px;
-height: 74px;
+.interest_rate_wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    font-size: 20px;
 
+    align-items: center;
+}
 
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
+.interest_rate_input_wrapper {
+	justify-content: center;
+	border: #bbb solid 1px;
+	border-radius: 0.375rem;
+    background: #fff;
+}
 
+.interest_rate_input{
+    width: 50px;
+    font-size: 20px;
 
-/* title */
+    padding-left: 10px;
 
-width: 169px;
-height: 26px;
+	background: transparent;
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 28px;
+	/* Vibrant Fills/Vibrant Primary */
+	border: none;
+	text-align: left;
 
-color: #000000;
+	/* Inside auto layout */
+	flex: flex-start;
+	align-content: center;
+}
 
+.interest_rate_input::placeholder {
+	color: #bbbbbb;
+}
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* desc */
-
-width: 363px;
-height: 28px;
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 28px;
-
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
+.interest_rate_input:focus-visible{
+	outline: none;
+}

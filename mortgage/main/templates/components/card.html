@@ -1,14 +1,22 @@
 <div class="card_wrapper">
     <div class=card>
-      <div class="card_image" id="{{ data.id }}">
-        <img src="{{ data.image }}">
+      <div class="card_image" id="{{ card.id }}">
+        <img src="{{ card.image }}">
       </div>
       <div class=card_body>
-        <span class="card_title">{{ data.title }}</span>
-        <span class="card_description">{{ data.description }}</span>
-        <form action="{% url 'calc_description' data.id %}" method="GET" enctype="multipart/form-data">
-          <button class="btn">Подробнее</button>
-        </form>
-      </div>
+        <span class="card_title">{{ card.title }}</span>
+        <span class="card_description">{{ card.description }}</span>
+        <div class="btn_group">
+          <form action="{% url 'mortgage_desc' card.id %}" method="GET" enctype="multipart/form-data">
+            <button class="btn">Подробнее</button>
+          </form>
+          <form action="{% url 'add_calculation' card.id %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <button id="btn_add" class="btn">
+              <img src="http://172.18.0.2:9000/images/plus.svg">
+            </button>
+          </form>
+        </div>
+      </div>  
     </div>
   </div> 

@@ -78,6 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mortgage',
+        # 'USER': 'aleksandr.khom.n@gmail.com',
         'USER': 'admin',
         'PASSWORD': 'root',
         'HOST': 'localhost',
